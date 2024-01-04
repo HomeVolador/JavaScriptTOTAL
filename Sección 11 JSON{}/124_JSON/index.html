@@ -7,7 +7,6 @@
     <title>JSON</title>
 </head>
 <body>
-    <h1>Transformación de Json en Objeto</h1>
     <div class="container-fluid">
         <h1>Mostras los valores del archivo JSON en HTML</h1>
         <hr>
@@ -15,13 +14,15 @@
         <div id="nombre"> </div>
     </div>
 </body>
-    <script>   
-        let datosJson;
-        //Creamos un objetop nuevo y lo recogemos en una variable.
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', "persona.json",true);
-        xhr.responseType = 'json';
-        xhr.onload = function() {
+    <script>
+        
+        let datosJson;                                  // Variable para contener recojer los datos de Json
+        
+        let xhr = new XMLHttpRequest();                 //Creamos la variable del nuevo objeto para pedirle los valores.
+
+        xhr.open('GET', "persona.json",true);           //Abrimos el objeto('Solicitamos la información', 'NOMBRE DEL ARCHIVO JSON', true)
+        xhr.responseType = 'json';                      //Invocamos el tipo de respuesta que será un json. mediante 
+        xhr.onload = function() {                       //Reciviremos la función. 
             if(xhr.status === 200) {
                 datosJson = xhr.response;
                 let elementoTexto = document.getElementById("nombre");
@@ -30,6 +31,6 @@
                 //Informar sobre el error.
             }
         }
-        xhr.send();
+        xhr.send();                                     //Todo lo que ha hecho la función se enviara mediante el metodo send().
     </script>
 </html>

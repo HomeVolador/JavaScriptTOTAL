@@ -14,8 +14,18 @@
 
     ANOTACIÓN INDEPENDIENTE DE JAVASCRIPTS QUIERE DECIR QUE PUEDE SER LEIDO POR OTROS LENGUAJES.
     
-3. XMLHttRequest()
-4. fetch()
-5. catch
+3. XMLHttRequest() Acceso a los datos Json desde JavaScript
+    let xhr = XMLHttRequest()    ---- Creamos la variable del nuevo objeto para pedirle los valores.
+
+4. fetch()   = Extraer o recuperar.
+    Solicitudes HTTP asíncronas.
+    Alternativa a XMLHttpRequest
+    Con una interface más simple y más limpia.
+
+    fetche (recibe la url o el archivo.json)
+        .then(respuesta => res.json())
+        devolviendo una promesa(valor que estará disponible) que se resuelve con la respuesta del servidor.
+
+5. catch()  = Atrapar errores.
 6. Peticiones y promesas
 7. Manejo de respuestas.
